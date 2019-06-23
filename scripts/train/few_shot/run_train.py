@@ -1,6 +1,6 @@
 import argparse
 
-from train import main
+from scripts.train.few_shot.train import main
 
 parser = argparse.ArgumentParser(description='Train prototypical networks')
 

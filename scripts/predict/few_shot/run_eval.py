@@ -1,12 +1,13 @@
 import argparse
 
-from eval import main
+from scripts.predict.few_shot.eval import main
 
 parser = argparse.ArgumentParser(description='Evaluate few-shot prototypical networks')
 
 default_model_path = 'results/best_model.pt'
 parser.add_argument('--model.model_path', type=str, default=default_model_path, metavar='MODELPATH',
-                    help="location of pretrained model to evaluate (default: {:s})".format(default_model_path))
+                    help="location of pretrained model to evaluate (default: {:s})".format(
+                        default_model_path))
 
 parser.add_argument('--data.test_way', type=int, default=0, metavar='TESTWAY',
                     help="number of classes per episode in test. 0 means same as model's data.test_way (default: 0)")
